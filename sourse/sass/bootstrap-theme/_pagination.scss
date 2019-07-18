@@ -1,9 +1,11 @@
+.pagination-wrapper ul,
 .pagination {
   display: flex;
   @include list-unstyled();
   @include border-radius();
+  justify-content: center;
 }
-
+.pagination-wrapper li .page-numbers,
 .page-link {
   position: relative;
   display: block;
@@ -28,7 +30,7 @@
     box-shadow: $pagination-focus-box-shadow;
   }
 }
-
+.pagination-wrapper li,
 .page-item {
   &:first-child {
     .page-link {
@@ -41,7 +43,7 @@
       @include border-right-radius($border-radius);
     }
   }
-
+    .current,
   &.active .page-link {
     z-index: 1;
     color: $pagination-active-color;

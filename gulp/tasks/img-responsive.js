@@ -1,8 +1,7 @@
 module.exports = function (){
 
 	const path = 'public/img';
-	let src = path + "/_src/*.{png,jpg,jpeg,webp,raw}"; // Where your PNGs are coming from.
-	let dest = path +'/webp'; // Where your WebPs are going.
+	let src = path + "/_src/*.{png,jpg,jpeg,webp,raw}"; 
 	
 	// Clean @*x IMG's
 $.gulp.task('cleanimg', function() {
@@ -40,6 +39,5 @@ $.gulp.task('cleanimg', function() {
 			})).on('error', function () { console.log('No matching images found') })
 			.pipe($.gp.rename(function (path) {path.extname = path.extname.replace('jpeg', 'jpg')}))
 			.pipe($.gulp.dest(path))
-			.pipe($.browserSync.stream());
 	});
 }

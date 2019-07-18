@@ -8,13 +8,25 @@ block title
 	title title
 
 block pagecontent
-
-
+	.container
+		+in-c()
+		+form-wrap
+			+input("placeholder","","") 
+			+input("placeholder","tel","") 
+			+input("placeholder","text","") 
+			+input("placeholder","text","label") 
+			+input("placeholder","textarea","") 
+			+input("placeholder","textarea","label") 
+			+input("","textarea","") 
+	+pugin()
 	+mob-mnu()
 	+header()
 		+top-line()
 		+top-nav()
-
+	.container
+		+piclazy('top-bg','jpg','bg')
+		+pic('s-approaches-3-3','jpg','bg')
+		+pic('s-approaches-3-3','jpg')
 	+header-block()
 	+s-form()
 	+s-contact()

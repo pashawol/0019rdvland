@@ -57,14 +57,11 @@ body {
 	}
 }
 .section {
-	padding-top: 30px;
-	padding-bottom: 30px;
+	 
 	@include bgs;
-
-	@include media-breakpoint-up(md) {
-		padding-top: 40px;
-		padding-bottom: 40px;
-	}
+ 
+		padding-top: rem(40px);
+		padding-bottom: rem(40px); 
 }
 
 .section-title {
@@ -454,12 +451,12 @@ input::-webkit-inner-spin-button {
 	margin: 0;
 	@include a-cent(y);
 	&-next{
-		background-image: url(../img/arr-right.png);
+		// background-image: url(../img/arr-right.png);
 		right: 0;
 	}
 	&-prev{
 		left: 0;
-		background-image: url(../img/arr-left.png);
+		// background-image: url(../img/arr-left.png);
 
 	}
 

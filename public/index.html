@@ -16,6 +16,52 @@
   </head>
   <body>
     <div class="main-wrapper">
+      <div class="container">
+        <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"></span>
+        </label>
+        <div class="form-wrap">
+          <form>
+            <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="text" placeholder="placeholder"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="text" placeholder="placeholder"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="text" placeholder="placeholder"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">label</span><input class="form-wrap__input" type="text" placeholder="placeholder"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap"><textarea class="form-wrap__input form-control" placeholder="placeholder"></textarea>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">label</span><textarea class="form-wrap__input form-control" placeholder="placeholder"></textarea>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap"><textarea class="form-wrap__input form-control" placeholder=""></textarea>
+            </div>
+            <!-- +e.input-wrap-->
+          </form>
+        </div>
+      </div>
+      <div class="pagination-wrapper">
+        <ul class="page-numbers">
+          <li><span class="prev page-numbers"><img src="img/svg/prev-double.svg" alt=""/></span></li>
+          <li><span class="prev page-numbers"><img src="img/svg/prev.svg" alt=""/></span></li>
+          <li><span class="page-numbers current"> 1</span></li>
+              <li><a class="page-numbers" href="#">1</a></li>
+              <li><a class="page-numbers" href="#">2</a></li>
+              <li><a class="page-numbers" href="#">3</a></li>
+              <li><a class="page-numbers" href="#">4</a></li>
+          <li><a class="next page-numbers" href="#"><img src="img/svg/next.svg" alt=""/></a></li>
+          <li><a class="next page-numbers" href="#"><img src="img/svg/next-double.svg" alt=""/></a></li>
+        </ul>
+      </div>
       <div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
       </div>
       <div class="menu-mobile menu-mobile--js d-lg-none">
@@ -83,6 +129,53 @@
         <!-- end top-nav-->
       </header>
       <!-- end HEADER.header-->
+      <div class="container">
+        <!-- picture.lazy-->
+        <picture class="lazy">
+          <!-- webp images-->
+          <source srcset="#" data-srcset="img/@2x/webp/top-bg.webp " media="(min-width: 992px)" type="image/webp"/>
+          <!-- crop 2x-->
+          <source srcset="#" data-srcset="img/@1x/webp/top-bg.webp " media="(min-width: 576px)" type="image/webp"/>
+          <!-- crop 4x-->
+          <source srcset="#" data-srcset="img/@0.5x/webp/top-bg.webp " type="image/webp"/>
+          <!-- /webp images -->
+          <source srcset="#" data-srcset="img/@2x/top-bg.jpg" media="(min-width: 992px)" type="image/jpg"/>
+          <!-- crop 2x-->
+          <source srcset="#" data-srcset="img/@1x/top-bg.jpg" media="(min-width: 576px)" type="image/jpg"/>
+          <!-- crop 4x--><img class="object-fit-js" src="#" data-src="img/@2x/top-bg.jpg" alt=""/>
+        </picture>
+        <!-- /picture.lazy-->
+        <!-- picture-->
+        <picture>
+          <!-- webp images-->
+          <source srcset="img/@2x/webp/s-approaches-3-3.webp " media="(min-width: 992px)" type="image/webp"/>
+          <!-- crop 2x-->
+          <source srcset="img/@1x/webp/s-approaches-3-3.webp " media="(min-width: 576px)" type="image/webp"/>
+          <!-- crop 4x-->
+          <source srcset="img/@0.5x/webp/s-approaches-3-3.webp " type="image/webp"/>
+          <!-- /webp images -->
+          <source srcset="img/@2x/s-approaches-3-3.jpg" media="(min-width: 992px)" type="image/jpg"/>
+          <!-- crop 2x-->
+          <source srcset="img/@1x/s-approaches-3-3.jpg" media="(min-width: 576px)" type="image/jpg"/>
+          <!-- crop 4x--><img class="object-fit-js" src="img/@2x/s-approaches-3-3.jpg" alt=""/>
+        </picture>
+        <!-- /picture-->
+        <!-- picture-->
+        <picture>
+          <!-- webp images-->
+          <source srcset="img/@2x/webp/s-approaches-3-3.webp " media="(min-width: 992px)" type="image/webp"/>
+          <!-- crop 2x-->
+          <source srcset="img/@1x/webp/s-approaches-3-3.webp " media="(min-width: 576px)" type="image/webp"/>
+          <!-- crop 4x-->
+          <source srcset="img/@0.5x/webp/s-approaches-3-3.webp " type="image/webp"/>
+          <!-- /webp images -->
+          <source srcset="img/@2x/s-approaches-3-3.jpg" media="(min-width: 992px)" type="image/jpg"/>
+          <!-- crop 2x-->
+          <source srcset="img/@1x/s-approaches-3-3.jpg" media="(min-width: 576px)" type="image/jpg"/>
+          <!-- crop 4x--><img src="img/@2x/s-approaches-3-3.jpg" alt=""/>
+        </picture>
+        <!-- /picture-->
+      </div>
       <!-- start header-block-->
       <div class="header-block" id="header-block">
         <div class="container">
@@ -124,18 +217,14 @@
           </div>
           <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
         </div>
-        <div class="form-wrap__input-wrap form-group">
-          <label><span class="form-wrap__title">text</span><input class="form-wrap__input form-control" type="Ваше Имя" required="required"/>
-          </label>
+        <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="text" placeholder="text"/>
         </div>
         <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group">
-          <label><span class="form-wrap__title">tel</span><input class="form-wrap__input form-control" type="Ваш телефон" required="required"/>
-          </label>
+        <div class="form-wrap__input-wrap"><input class="form-wrap__input" type="text" placeholder="tel"/>
         </div>
         <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
         <div class="form-wrap__polite">
-          <label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
           </label>
         </div>
       </form>

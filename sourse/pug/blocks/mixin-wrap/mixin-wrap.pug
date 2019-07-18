@@ -18,30 +18,53 @@ mixin breadcrumb(...items)
 		
 //- pugination
 mixin pugin()
-	nav(aria-label='...')
-		ul.pagination.justify-content-center
-			li.page-item.disabled
-				a.page-link(href='#', tabindex='-1') 
-					i(class="fas fa-chevron-left")
-			li.page-item.disabled
-				a.page-link.d-none.d-md-block(href='#', tabindex='-1') Назад
+	//- nav(aria-label='...')
+	//- 	ul.pagination.justify-content-center
+	//- 		li.page-item.disabled
+	//- 			a.page-link(href='#', tabindex='-1') 
+	//- 				i(class="fas fa-chevron-left")
+	//- 		li.page-item.disabled
+	//- 			a.page-link.d-none.d-md-block(href='#', tabindex='-1') Назад
 
-			li.page-item
-				a.page-link(href='#') 1
-			li.page-item.active
-				a.page-link(href='#')
-					| 2 
-					span.sr-only (current)
-			li.page-item
-				a.page-link.page-link-more(href='#') ...
-			li.page-item
-				a.page-link(href='#') 3
+	//- 		li.page-item
+	//- 			a.page-link(href='#') 1
+	//- 		li.page-item.active
+	//- 			a.page-link(href='#')
+	//- 				| 2 
+	//- 				span.sr-only (current)
+	//- 		li.page-item
+	//- 			a.page-link.page-link-more(href='#') ...
+	//- 		li.page-item
+	//- 			a.page-link(href='#') 3
 
-			li.page-item
-				a.page-link.d-none.d-md-block(href='#') Дальше
-			li.page-item
-				a.page-link(href='#') 
-					i(class="fas fa-chevron-right")
+	//- 		li.page-item
+	//- 			a.page-link.d-none.d-md-block(href='#') Дальше
+	//- 		li.page-item
+	//- 			a.page-link(href='#') 
+	//- 				i(class="fas fa-chevron-right")
+	.pagination-wrapper
+		ul.page-numbers
+			li
+				span.prev.page-numbers( )
+					img(src="img/svg/prev-double.svg", alt="")
+			li
+				span.prev.page-numbers( )
+					img(src="img/svg/prev.svg", alt="")
+			li
+				span.page-numbers.current  1
+			mixin li(n)
+				li
+					a.page-numbers(href='#')= n
+			+li("1")
+			+li("2")
+			+li("3")
+			+li("4") 
+			li
+				a.next.page-numbers(href='#')
+					img(src="img/svg/next.svg", alt="")
+			li
+				a.next.page-numbers(href='#')
+					img(src="img/svg/next-double.svg", alt="")
 //- /pugination
 //- h2.yel(class="  wow fadeInUp animated " data-wow-offset="120" data-wow-duration="1.2s")  
 //- arrow for swiper-slider

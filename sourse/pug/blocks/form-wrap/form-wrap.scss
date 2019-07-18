@@ -1,9 +1,10 @@
 .form-wrap{
  	&__input-wrap{
-
- 	 
- 	}
- 	&__input{
+			@extend .form-group;
+			
+		}
+		&__input{
+			@extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
  	}
@@ -78,7 +79,7 @@
 	margin-bottom: rem(20);
 	cursor: pointer;
 	position: relative;
-	padding-left: 35px;
+	padding-left: rem(35px);
 	display: inline-block;
 	&__input{
 		position: absolute;
@@ -94,16 +95,22 @@
 	&__lab{
 		left: 0;
 		display: block;
-		top: -1px;
-		// display: inline-block;
-		width: 20px;
-		height: 20px;
+		top: -1px; 
+		width: rem(20px);
+		height: rem(20px);
 		background-color: $primary;
 		@include mt;
 		position: absolute; 
 		margin-right: 10px;
+		&::after{  
+			content: '';
+			position: absolute;
+			@include a-cent; 
+			opacity: 0;
+		}
 
 	}
+ 
 	&__input[type="checkbox"] + &__lab{
 		&::after{ 
 			content:   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 448 512'%3E%3Cpath fill='%23fff' d='M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z' class='st0'/%3E%3C/svg%3E");
@@ -112,32 +119,23 @@
 			opacity: 0;
 		}
 	}
-	&__input[type="radio"] + &__lab{
-		 
+
+	&__input[type="radio"] + &__lab{ 
 		border-radius: 50%;
 		&::after{ 
-			content: '';
-			position: absolute;
-			@include a-cent;
-			background-color: $success;
-			opacity: 0;
-			width: 10px;
-			height: 10px;
 			border-radius: 50%;
 		}
 	}
 
-	&__input[type="checkbox"]:checked + &__lab{
+	&__input:checked + &__lab{
 		background-color: $success;
 		 
-	}
-	&__input:checked + &__lab{ 
 		&::after{
-
+	
 			opacity: 1;
 		}
 	}
-
+ 
 }
 
 

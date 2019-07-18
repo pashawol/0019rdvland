@@ -2,39 +2,46 @@ mixin form-head()
 	form.js-form-validate( data-parsley-validate="") 
 		input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
 		block
-mixin input(p ,  t , pl)
-	+e.input-wrap.form-group
-		label
-			+e.SPAN.title= p
-			+e.INPUT.input.form-control(type= t placeholder= pl)&attributes(attributes)
-	// +e.input-wrap
-mixin ta(p , pl)
-	+e.input-wrap.form-group
-		label
-			+e.SPAN.title= p
-			+e.TEXTAREA.input.form-control( placeholder= pl)&attributes(attributes)
+
+mixin input(pl,  t, p, name )
+	mixin t(t,pl)
+		if t== "textarea"
+			+e.TEXTAREA.input.form-control( placeholder= pl name= name)&attributes(attributes)
+		else if t && t== !"textarea"
+			+e.INPUT.input(type= t placeholder= pl name= name)&attributes(attributes)
+		else
+			+e.INPUT.input(type="text" placeholder= pl name= name)&attributes(attributes)
+	+e.input-wrap
+		if p
+			label
+				+e.SPAN.title= p
+				+t(t,pl)
+		else
+			+t(t,pl)
 	// +e.input-wrap
 
+
+//- wrapper for form
 mixin form-wrap()
 	+b.form-wrap&attributes(attributes)
 		form
 			block
+//- /wrapper for form
 
-mixin ci()
+
+mixin in-c(typ, text, name )
 	+b.LABEL.custom-input
-		+e.INPUT.input(type="checkbox")
+		if typ
+			+e.INPUT.input(type="radio" , name= name)
+		else 
+			+e.INPUT.input(type="checkbox" , name= name)
+
 		+e.SPAN.lab
-		| 
-mixin in-rad(n)
-	+b.LABEL.custom-input
-		+e.INPUT.input(type="radio" name= n)&attributes(attributes)
-		+e.SPAN.lab
-		block 
-mixin in-ch()
-	+b.LABEL.custom-input
-		+e.INPUT.input(type="checkbox" name= n)&attributes(attributes)
-		+e.SPAN.lab
-		block 
+		if block
+			block
+		else
+			+e.SPAN.text= text
+ 
 mixin add-file(n)
 	+b.add-file
 		label
@@ -46,5 +53,5 @@ mixin add-file(n)
 
 mixin polite()
 	+e.polite
-		+in-ch('checked')(checked)
+		+in-c('','','checked')(checked)
 			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
