@@ -1,7 +1,8 @@
 module.exports = function (){
 
+	const sourse = 'sourse/img';
 	const path = 'public/img';
-	let src = path + "/_src/*.{png,jpg,jpeg,webp,raw}"; 
+	let src = sourse + "/*.{png,jpg,jpeg,webp,raw}"; 
 	
 	// Clean @*x IMG's
 $.gulp.task('cleanimg', function() {
@@ -20,10 +21,10 @@ $.gulp.task('cleanimg', function() {
 					width: '50%', quality: 75, progressive: true,  rename: { prefix: '@1x/', }
 				},
 				
-				 {
-					// Produce @0.5x images
-					width: '25%', quality: 75, progressive: true,  rename: { prefix: '@0.5x/', }
-				},
+				//  {
+				// 	// Produce @0.5x images
+				// 	width: '25%', quality: 75, progressive: true,  rename: { prefix: '@0.5x/', }
+				// },
 	
 					{ 	width: '100%',quality: 75, progressive: true,  rename: { prefix: '@2x/webp/', extname: '.webp', 	},
 					},
@@ -31,8 +32,8 @@ $.gulp.task('cleanimg', function() {
 					{ 	width: '50%',quality: 75, progressive: true,  rename: {  prefix: '@1x/webp/',  extname: '.webp', 	},
 					} ,
 					
-					{ 	width: '25%',quality: 75, progressive: true,  rename: {  prefix: '@0.5x/webp/',  extname: '.webp', 	},
-					} ,
+					// { 	width: '25%',quality: 75, progressive: true,  rename: {  prefix: '@0.5x/webp/',  extname: '.webp', 	},
+					// } ,
 	
 					
 			]
