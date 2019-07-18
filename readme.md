@@ -5,7 +5,7 @@
 
 1. https://github.com/pashawol/starter/blob/db4800490bd50b9a8b98b7cbb4c955cf37d660fe/sourse/pug/blocks/form-wrap/form-wrap.pug
 1.1 Переделал в  одну миксину для инпутов и textarea в pug
-
+```
 mixin input(pl,  t, p, name )
 	mixin t(t,pl)
 		if t== "textarea"
@@ -22,9 +22,9 @@ mixin input(pl,  t, p, name )
 		else
 			+t(t,pl)
 	// +e.input-wrap
-
+```
 1.2. Переделал в  одну миксину для инпутов  checkbox и radio
-
+```
 mixin in-c(typ, text, name )
 	+b.LABEL.custom-input
 		if typ
@@ -37,6 +37,7 @@ mixin in-c(typ, text, name )
 			block
 		else
 			+e.SPAN.text= text
+```
 2. https://github.com/pashawol/starter/blob/db4800490bd50b9a8b98b7cbb4c955cf37d660fe/sourse/pug/blocks/mixin-wrap/mixin-wrap.pug
 2.1  Добавил второй  вариант  пагинации под worpress . Стили подогнал
 
