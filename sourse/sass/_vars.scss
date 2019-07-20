@@ -11,7 +11,33 @@ $default-font: "roboto";
 $def: #373a41;
 $em-base: 16px;
 $small: rem(14);
+$url: '../img/';
+$path2: '@2x/';
+$path1: '@1x/';
  
+
+
+// mixin для Фона
+@mixin bg($src,$media:xy , $path:xy){
+  @if $media == xy{
+    @if $path == xy{ 
+      background-image: url(#{$url}#{$path2}#{$src});
+    }
+    @else if $path == 1{
+      background-image: url(#{$url}#{$path1}#{$src}); 
+    } 
+    @else{
+      background-image: url(#{$url}#{$path}/#{$src});  
+    } 
+  }
+  @else{
+    @include media-breakpoint-up($media) {
+      background-image: url(#{$url}#{$path2}#{$src});
+    }
+    background-image: url(#{$url}#{$path1}#{$src});
+
+  }
+} 
 // обсалютное центрирование
  
 @mixin  a-cent($xy:xy) {

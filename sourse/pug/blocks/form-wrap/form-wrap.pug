@@ -3,24 +3,12 @@ mixin form-head()
 		input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
 		block
 
-mixin input(pl,  t, p, name )
-	mixin t(t,pl)
+mixin input(pl,  t, p )
+	mixin t(t='text',pl, name= t)
 		if t== "textarea"
-			if name
-				+e.TEXTAREA.input.form-control( placeholder= pl name= name)&attributes(attributes)
-			else
-				+e.TEXTAREA.input.form-control( placeholder= pl name= t)&attributes(attributes)
-		else if t || t== !"textarea"
-			if name
-				+e.INPUT.input(type= t placeholder= pl name= name)&attributes(attributes)
-			else
-				+e.INPUT.input(type= t placeholder= pl name= t )&attributes(attributes)
-
+			+e.TEXTAREA.input.form-control( placeholder= pl name= name)&attributes(attributes)  
 		else
-			if name
-				+e.INPUT.input(type="text" placeholder= pl name= name)&attributes(attributes)
-			else
-				+e.INPUT.input(type="text" placeholder= pl name= t)&attributes(attributes)
+			+e.INPUT.input(type= t placeholder= pl name= name)&attributes(attributes) 
 	+e.input-wrap
 		if p
 			label
@@ -39,20 +27,12 @@ mixin form-wrap()
 //- /wrapper for form
 
 
-mixin in-c(typ, text, name )
+mixin in-c(typ="checkbox", text, name= typ )
 	+b.LABEL.custom-input
-		if typ
-			+e.INPUT.input(type="radio" , name= name) 
-		else
-			if name 
-				+e.INPUT.input(type="checkbox" , name= name)
-			else
-				+e.INPUT.input(type="checkbox"  name= typ)
-
+		+e.INPUT.input(type= typ , name= name)&attributes(attributes)
 		+e.SPAN.lab
 		if block
-			block
-			
+			block 
 		else
 			+e.SPAN.text= text
  
@@ -67,5 +47,5 @@ mixin add-file(n)
 
 mixin polite()
 	+e.polite
-		+in-c('','','checked')(checked)
+		+in-c()(checked)
 			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
