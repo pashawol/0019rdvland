@@ -2,7 +2,10 @@ $output-bourbon-deprecation-warnings: false;
 // @import "mq";
 @import "bourbon/app/assets/stylesheets/bourbon";
 // @import "../../node_modules/rfs/scss";
+ 
+@import "mixin";
 @import "vars";
+@import "fonts";
 @import "../../public/img/svg/_sprite";
 @import "bootstrap-theme/bootstrap";
 // @import "../libs/animate";

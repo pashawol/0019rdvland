@@ -1,5 +1,12 @@
-Сборка на основе pug. scss, Bootstrap 4.3.1
+Сборка на основе pug. scss, Bootstrap 4.3.2
 
+
+4.3.2
+1. Перенес шрифты в файл _fonts.scss https://github.com/pashawol/mega-front-starter/blob/master/sourse/sass/_fonts.scss
+2. Перенес миксины в файл _mixin.scss https://github.com/pashawol/mega-front-starter/blob/master/sourse/sass/_mixin.scss
+3. Добавил мискину bg , чтобы упростить работу с фоновыми изображениями https://github.com/pashawol/mega-front-starter/blob/master/sourse/sass/_mixin.scss
+4. Упростил миксины для picture(https://github.com/pashawol/mega-front-starter/blob/4719542ab1dd4719c68799c9462c04ce67a932d1/sourse/pug/blocks/form-wrap/form-wrap.pug) и input (https://github.com/pashawol/mega-front-starter/blob/4719542ab1dd4719c68799c9462c04ce67a932d1/sourse/pug/blocks/form-wrap/form-wrap.pug)
+5. Перенес в _vars.scss  переменные bootstrap. Теперь редактировать почти все в этом файле https://github.com/pashawol/mega-front-starter/blob/4719542ab1dd4719c68799c9462c04ce67a932d1/sourse/sass/_vars.scss
 
 4.3.1
 
