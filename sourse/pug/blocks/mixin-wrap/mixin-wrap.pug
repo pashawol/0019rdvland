@@ -115,18 +115,18 @@ mixin piclazy(i, exp="jpg", media='576px', bg )
 	picture.lazy
 		// webp images
 		if media !== 0
-			source(srcset="#" data-srcset=`img/@2x/webp/${i}.webp ` media="(min-width: 576px)", type="image/webp" )
+			source(srcset="#" data-srcset=`img/@2x/webp/${i}.webp ` media=`(min-width: ${media})`, type="image/webp" )
 		
 			source(srcset="#" data-srcset=`img/@1x/webp/${i}.webp `  , type="image/webp")
 		else
-			source(srcset="#" data-srcset=`img/@2x/webp/${i}.webp ` media="(min-width: 576px)", type="image/webp" ) 
+			source(srcset="#" data-srcset=`img/@2x/webp/${i}.webp `   type="image/webp" ) 
 		// /webp images 
 		if media !==0
-			source(srcset="#" data-srcset=`img/@2x/${i}.${exp}` media="(min-width: 576px)", type=`image/${exp}` )
+			source(srcset="#" data-srcset=`img/@2x/${i}.${exp}` media=`(min-width: ${media})`, type=`image/${exp}` )
 			 
 			source(srcset="#" data-srcset=`img/@1x/${i}.${exp}`   type=`image/${exp}`) 
 		else
-			source(srcset="#" data-srcset=`img/@2x/${i}.${exp}` media="(min-width: 576px)", type=`image/${exp}` )
+			source(srcset="#" data-srcset=`img/@2x/${i}.${exp}`  type=`image/${exp}` )
 		if bg == 'bg' 
 			img.object-fit-js(src=`#` data-src=`img/@2x/${i}.${exp}`, alt="") 
 		else
@@ -155,20 +155,4 @@ mixin pic(i, exp="jpg", media='576px', bg )
 		else 
 			img(src=`img/@2x/${i}.${exp}`, alt="") 
 	// /picture
-		 
-//- /picture with lazy
-	example
-	+piclazy('consult','png','bg')
-	or
-	+piclazy('consult','png')
-
-
- 
-		 
-//- /picture
-	example
-	+piclazy('consult','png','bg')
-	or
-	+piclazy('consult','png')
-
-
+  

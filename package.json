@@ -1,6 +1,6 @@
 {
-  "name": "PH-GBSP",
-  "version": "1.0.001",
+  "name": "mega-front-starter",
+  "version": "4.3.2",
   "description": "Gulp Bootstrap scss Pug",
   "main": "block.js",
   "scripts": {

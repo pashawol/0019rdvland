@@ -29,26 +29,11 @@ body {
 	position: relative;
 
 	&::before {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		@include mt;
-		background-color: #000000;
-		opacity: 0;
-		z-index: -1;
-		top: 0;
+		content: ''; position: absolute; 	left: 0; 	top: 0; 	width: 100%; height: 100%; @include mt; 	background-color: #000000; opacity: 0; 	z-index: -1; top: 0;
 	}
 
 	&.fixed {
-		overflow: hidden;
-		position: absolute;
-		width: 100%;
-		left: 0;
-		top: 0;
-		z-index: 999;
+		overflow: hidden; position: absolute; width: 100%; left: 0; top: 0; z-index: 999;
 
 		&::before {
 			z-index: 999; 
@@ -56,18 +41,15 @@ body {
 		}
 	}
 }
-.section {
-	 
-	@include bgs;
- 
+.section { 
+	@include bgs; 
 		padding-top: rem(40px);
 		padding-bottom: rem(40px); 
 }
 
 .section-title {
 	@extend .h2;
-	padding-bottom: em(10);
-	
+	padding-bottom: em(10); 
 	>h2 {
 		font-size: inherit;
 		
@@ -130,11 +112,7 @@ body {
 }
 
 
-.main-wrapper {
-	position: relative;
-	overflow: hidden;
-	height: 100%;
-}
+.main-wrapper {position: relative;overflow: hidden;height: 100%;}
 
 .slick-slide img {
 	display: inline
@@ -147,11 +125,8 @@ body {
 .mfp-with-zoom {
 
 	.mfp-container,
-	&.mfp-bg {
-		opacity: 0;
-		backface-visibility: hidden;
-
-		transition: all 0.3s ease-out;
+	&.mfp-bg {opacity: 0;backface-visibility: hidden;
+transition: all 0.3s ease-out;
 	}
 
 	&.mfp-ready {
@@ -205,10 +180,7 @@ body {
 /* start state */
 
 .my-mfp-zoom-in {
-	.zoom-anim-dialog {
-		opacity: 0;
-		transition: all 0.2s ease-in-out;
-		transform: scale(0.8);
+	.zoom-anim-dialog {opacity: 0;transition: all 0.2s ease-in-out;transform: scale(0.8);
 	}
 
 	&.mfp-ready .zoom-anim-dialog {
@@ -236,10 +208,7 @@ body {
 }
 
 .my-mfp-slide-bottom {
-	.zoom-anim-dialog {
-		opacity: 0;
-		transition: all 0.2s ease-out;
-		transform: translateY(-20px) perspective(600px) rotateX(10deg);
+	.zoom-anim-dialog {opacity: 0;transition: all 0.2s ease-out;transform: translateY(-20px) perspective(600px) rotateX(10deg);
 	}
 
 	&.mfp-ready .zoom-anim-dialog {
@@ -401,40 +370,10 @@ input::-webkit-inner-spin-button {
 
 
 .invisible{
-	position: absolute;
-		// opacity: 0;
-		width: 1px;
-		height: 1px;
-		margin: -1px;
-		border: 0;
-		padding: 0;
-		clip: rect(0 0 0 0 );
-		overflow: hidden;
+	position: absolute;width: 1px;height: 1px;margin: -1px;border: 0;padding: 0;clip: rect(0 0 0 0 );overflow: hidden;
 }
 
-// .lazy-bg,
-// img.lazy{
-//   -webkit-filter: blur(5px);
-//   filter: blur(5px);
-//   transition: filter 400ms, -webkit-filter 400ms;
-  
-// }
-// .lazyloaded{
-//   filter: blur(0);
-// }
-// img{
-// 	display: block;
-// }
-
-// picture{
-// 	// display: inline-block;
-// 	display: block;
-// 	img{
-// 		// width: 100%;
-// 	}
-// }
-
-
+ 
 
 .control-wrap{
 	position: relative;
@@ -486,11 +425,9 @@ input::-webkit-inner-spin-button {
 
 
 
-@include media-breakpoint-up(lg) {
-
+@include media-breakpoint-up(lg) { 
 	.wow{
-		visibility: hidden;
-		
+		visibility: hidden; 
 }
 }
 

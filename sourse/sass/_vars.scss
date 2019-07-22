@@ -1,5 +1,6 @@
 
 
+// Путь к изображениям
 $url: '../img/';
 $path2: '@2x/';
 $path1: '@1x/';
@@ -33,12 +34,9 @@ $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
-$grays: () !default;
+$colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
-$grays: map-merge(
-  ( ),
-  $grays
-);
+$colors: map-merge(  ( ),  $colors);
 
 
 $primary:       $blue !default;

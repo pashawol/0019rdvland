@@ -1,3 +1,6 @@
+function LazyFunction(){
+
+
 document.addEventListener("DOMContentLoaded", function () {
 	var lazyImages = [].slice.call(document.querySelectorAll("picture.lazy img, picture.lazy source, img.lazy"));
 	var active = false;
@@ -87,3 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	window.addEventListener("orientationchange", lazyLoad);
 	window.addEventListener("DOMContentLoaded", lazyLoad);
 });
+
+}
+
+LazyFunction();
