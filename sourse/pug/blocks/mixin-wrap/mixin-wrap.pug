@@ -110,7 +110,7 @@ mixin mnu()
 
 
 //- picture with lazy
-mixin piclazy(i, exp="jpg", media='576px', bg )
+mixin piclazy(bg, i, exp="jpg", media='576px')
 	// picture.lazy
 	picture.lazy
 		// webp images
@@ -130,11 +130,11 @@ mixin piclazy(i, exp="jpg", media='576px', bg )
 		if bg == 'bg' 
 			img.object-fit-js(src=`#` data-src=`img/@2x/${i}.${exp}`, alt="") 
 		else
-			img(src="#" data-src=`img/@2x/${i}.${exp}`, alt="") 
+			img(src=`#` data-src=`img/@2x/${i}.${exp}`, alt="") 
 	// /picture.lazy
 
 	
-mixin pic(i, exp="jpg", media='576px', bg )
+mixin pic(bg, i, exp="jpg", media='576px' )
 	// picture
 	picture
 		// webp images
@@ -155,4 +155,19 @@ mixin pic(i, exp="jpg", media='576px', bg )
 		else 
 			img(src=`img/@2x/${i}.${exp}`, alt="") 
 	// /picture
-  
+		 
+//- /picture with lazy
+	example
+	+piclazy('consult','png','bg')
+	or
+	+piclazy('consult','png')
+
+
+ 
+		 
+//- /picture
+	example
+	+piclazy('consult','png','bg')
+	or
+	+piclazy('consult','png')
+
