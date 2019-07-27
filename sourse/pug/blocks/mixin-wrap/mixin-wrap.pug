@@ -85,7 +85,7 @@ mixin arrow()
 mixin soc()
 	+b.soc
 		mixin item()
-			+e.A.item(href="№" target="_blank")
+			+e.A.item(href="#" target="_blank")
 				block
 		+item()
 			+icon('fb') 
@@ -123,7 +123,7 @@ mixin pic(bg, i,lazy, exp="jpg", media='576px')
 	mixin source(i, exp, path , lazy)
 		//- let path = 
 		if lazy
-			source(data-srcset=`img/@${path}/${i}.${exp}`  type=`image/${exp}` )&attributes(attributes) 
+			source(srcset="#" data-srcset=`img/@${path}/${i}.${exp}`  type=`image/${exp}` )&attributes(attributes) 
 		else
 			source(srcset=`img/@${path}/${i}.${exp}`  type=`image/${exp}` )&attributes(attributes) 
 	mixin img(i, exp, path , lazy)
