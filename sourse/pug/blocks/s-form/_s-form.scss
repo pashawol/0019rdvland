@@ -1,4 +1,15 @@
 .s-form {
+	background-color: #f3f9fb;
+	.form-wrap{
+		max-width: 1020px;
+	}
+	p{
+		padding-bottom: 2rem;
+	}
+	h2{
+		max-width: 530px;
+	}
+	
 	//
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

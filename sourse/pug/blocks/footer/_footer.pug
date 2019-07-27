@@ -1,4 +1,37 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			.row
+				.col-xl-3.col
+					.info
+						.phone.blocks
+							.inline-block
+								.head-phone
+									+icon('phone-alt-solid')
+
+									a(href='tel:+74951270347') +7 (495) 127-03-47
+									br
+									a.small(href="#") Заказать звонок
+							.inline-block
+								.email.blocks
+									a(href='mailto:info@rdv-it.ru')
+										span info@rdv-it.ru
+							.inline-block
+								.address.blocks
+									| г. Москва, Красносельская нижн. ул., д. 35 стр. 64, офис 225 
+									br
+									|  Бизнес-центр «Виктория плаза»
+									br
+				.col-xl-3.col-sm-auto
+					+soc()
+				.col-xl-3.col
+					.right_block
+						.link_block
+							.confidentiality
+								a(href='/include/licenses_detail.php') Политика конфиденциальности
+							.print-link
+								svg.svg.svg-print(xmlns='http://www.w3.org/2000/svg', width='16', height='16', viewBox='0 0 16 16')
+									path.cls-print(data-name='Rectangle 665 copy 4', d='M1570,210h-2v3h-8v-3h-2a2,2,0,0,1-2-2v-5a2,2,0,0,1,2-2h2v-4h8v4h2a2,2,0,0,1,2,2v5A2,2,0,0,1,1570,210Zm-8,1h4v-4h-4v4Zm4-12h-4v2h4v-2Zm4,4h-12v5h2v-3h8v3h2v-5Z', transform='translate(-1556 -197)')
+								span.text Версия для печати 
+				.col-xl-3.col-lg-auto.order-lg-first
+					+e.copy  © 2019 Все права защищены.

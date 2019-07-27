@@ -1,19 +1,33 @@
 
+mixin search()
+	+b.form-search
+		form
+			input(type="text" placeholder="Введите слово для поиска")
+			button(type="submit") 
+				+icon("search")
 mixin mob-mnu()
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
+			span
 		+e.inner
 		
+			+search()
 			+mnu()
-			.text-right
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav.block-with-lazy.d-none.d-lg-block
 		.container
-			+mnu()
-					
+			.row
+				.col-8
+					.row
+						.col-lg-auto.col
+							+b.toggle-menu-mobile--js
+								span
+								span
+						.col
+							+mnu()
+				.col
+					+search()
 	// end top-nav

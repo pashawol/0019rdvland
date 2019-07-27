@@ -14,6 +14,7 @@
   }
   @else{
     @include media-breakpoint-up($media) {
+      // margin-top: 0;
       background-image: url(#{$url}#{$path2}#{$src});
     }
     background-image: url(#{$url}#{$path1}#{$src});

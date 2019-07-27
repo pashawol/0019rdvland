@@ -2,5 +2,23 @@ mixin top-line()
 	// start .top-line
 	+b.top-line.block-with-lazy
 		.container
-			.row top-line
+			.row
+				.col-auto.col.d-lg-none
+					+b.toggle-menu-mobile--js
+						span
+						span
+				.col-lg-8.col
+					+e.logo-wrap
+						a(href="#")
+							+pic("",'logo',"","png")
+							//- | ИТ&nbsp;КОНСАЛТИНГ И&nbsp;КОМПЛЕКСНАЯ АВТОМАТИЗАЦИЯ БИЗНЕСА
+							span.d-none.d-sm-block ИТ&nbsp;консалтинг и&nbsp;комплексная автомотизация бизнеса
+				.col-lg.col-auto
+					.row
+						.col
+							+e.tel(href="tel:8(495)127-03-47") 
+								+icon('phone-alt-solid')
+								| 8(495) 127-03-47
+						.col-auto.d-none.d-lg-block
+							a.btn.btn-warning(href="#") Заказать звонок
 	// end .top-line

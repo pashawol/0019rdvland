@@ -7,14 +7,38 @@
 			@extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
- 	}
+		 text-align: center;
+	 }
+	 &__title{
+		 line-height: 1.2;
+		 @include rfs(rem(24));
+		 font-weight: 700;
+		 padding-bottom: 2rem;
+	 }
  	&__btn{
- 		cursor: pointer;
+		 cursor: pointer;
+		 @extend .btn;
+		//  @extend .btn-warning;
+		 padding-left: rem(5);
+		 padding-right: rem(5);
+		//  @extend 
+		// display: block;
+		width: 100%;
  	}
  	label{
  		width: 100%;
  		display: block;
- 	}
+	 }
+	 
+&__polite{
+	font-size: rem(12);
+	line-height: 1.2;
+	margin-bottom: 1rem;
+	a{
+		text-decoration: underline;
+		color: #1e7cab;
+	}
+}
 }
 
 
@@ -32,6 +56,7 @@
 .parsley-errors-list{
 	color: red;
 }
+
 
 // 
 @include media-breakpoint-up(xl) {}

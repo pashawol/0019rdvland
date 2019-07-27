@@ -1,8 +1,112 @@
 .footer {
-		
+  @include media-breakpoint-up(sm) {
 
-
+    padding: rem(80px) 0 rem(56px);
+  }
+  padding: rem(40px) 0 rem(26px);
+  background: #2f3338;
+&__copy{
+  font-size: $small;
+  color: #999999;
+  margin-bottom: 1rem;
+}
+a{
+  color: #e9e9ea!important;
+    // padding-left: 5px;
+}
+.inline-block{
+  padding-bottom: rem(10);
+}
+color: #ffffff;
 // 
+.confidentiality a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 18px;
+  height: 16px;
+  background: url(../img/svg/footer_icons.svg) -41px -40px no-repeat;
+  opacity: 0.5;
+}
+.confidentiality a {
+  position: relative;
+  padding: 0 0 0 31px;
+  display: inline-block;
+}
+.confidentiality {
+  margin: 0 0 14px;
+  line-height: 1.6em;
+}
+.print-link {
+  font-size: 0.6667em;
+  line-height: 1.9em;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  margin-bottom: rem(20);
+}.svg-print {
+  position: absolute;
+  left: 2px;
+  top: 3px;
+  display: inline-block;
+}
+.print-link .svg-print {
+  opacity: 0.5;
+}
+.print-link {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 31px;
+}
+.print-link .cls-print {
+  fill: #FFF;
+}
+.email a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 11px;
+  height: 9px;
+  opacity: 0.5;
+  background: url(../img/svg/footer_icons.svg) -84px -44px no-repeat;
+}
+.email a {
+  position: relative;
+  padding: 0 0 0 29px;
+  color: #ffffff;
+}
+.address {
+  position: relative;
+  padding: 0 0 0 29px;
+  line-height: 1.3333em;
+  color: #FFF;
+  margin-bottom: rem(20);
+}
+.head-phone{
+  padding-left: 20px;
+  position: relative;
+  .icon{
+    font-size: 1rem;
+    margin-right: 5px;
+    margin-left: -25px;
+  }
+}
+.address:before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 4px;
+  width: 7px;
+  height: 11px;
+  opacity: 0.5;
+  background: url(../img/svg/footer_icons.svg) -72px -43px no-repeat;
+} 
+a.small{
+  font-size: rem(12);
+}
 @include media-breakpoint-up(xl) {}
 
 @include media-breakpoint-up(lg) {}
