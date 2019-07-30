@@ -1,5 +1,5 @@
 .s-work {
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(sm) {
 
 		padding-bottom: 0;
 	}
@@ -13,7 +13,7 @@
 		@include block(825, 510);
 	}
 	&__slider-wrap{
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(sm) {
 
 			position: relative;
 			padding-top: 4.5%;
